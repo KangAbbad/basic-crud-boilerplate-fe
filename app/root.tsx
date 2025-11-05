@@ -1,7 +1,6 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router'
 
 import type { Route } from './+types/root'
-import { ReloadPrompt } from './components/ReloadPrompt'
 import './app.css'
 import { AuthProvider } from './providers/AuthProvider'
 import { TanstackQueryProvider } from './providers/TanstackQueryProvider'
@@ -42,8 +41,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <meta name="theme-color" content="#ffffff" />
-        <link rel="manifest" href="/manifest.webmanifest" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <Meta />
         <Links />
       </head>
@@ -51,7 +48,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <TanstackQueryProvider>
           <AuthProvider>{children}</AuthProvider>
         </TanstackQueryProvider>
-        <ReloadPrompt />
         <ScrollRestoration />
         <Scripts />
       </body>
