@@ -60,8 +60,8 @@ export function ConfirmationAlertDialog({
   description,
   onConfirm,
   variant = 'default',
-  cancelText = 'Batal',
-  confirmText = 'Konfirmasi',
+  cancelText = 'Cancel',
+  confirmText = 'Confirm',
 }: Props) {
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>

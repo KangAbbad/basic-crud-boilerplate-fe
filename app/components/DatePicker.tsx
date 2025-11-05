@@ -22,7 +22,7 @@ export function DatePicker({
   error,
   label,
   isRequired,
-  placeholder = 'Pilih tanggal',
+  placeholder = 'Select date',
   onChange,
 }: DatePickerProps) {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false)

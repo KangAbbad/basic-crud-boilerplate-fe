@@ -21,9 +21,9 @@ export function OrganizationSelector({
   value,
   onChange,
   error,
-  label = 'Ketersediaan Organisasi',
+  label = 'Organization Scope',
   required = false,
-  placeholder = 'Pilih cakupan organisasi',
+  placeholder = 'Select organization scope',
   disabled = false,
   showBadge = true,
   allowGlobal = true,
@@ -55,7 +55,7 @@ export function OrganizationSelector({
           <SelectValue placeholder={placeholder} />
         </SelectTrigger>
         <SelectContent>
-          {allowGlobal && <SelectItem value="__GLOBAL__">Semua Organisasi</SelectItem>}
+          {allowGlobal && <SelectItem value="__GLOBAL__">All Organizations</SelectItem>}
           {organizationList.map((organization) => (
             <SelectItem key={organization.id} value={organization.id}>
               {organization.name}
@@ -69,7 +69,7 @@ export function OrganizationSelector({
           {value && value !== '' ? (
             <Badge>Organisasi-spesifik: {selectedOrganization?.name}</Badge>
           ) : (
-            allowGlobal && <Badge variant="secondary">Tersedia di semua organisasi</Badge>
+            allowGlobal && <Badge variant="secondary">Available in all organizations</Badge>
           )}
         </div>
       )}

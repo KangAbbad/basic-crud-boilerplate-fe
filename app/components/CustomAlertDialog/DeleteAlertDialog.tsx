@@ -54,8 +54,8 @@ export function DeleteAlertDialog({
   title,
   description,
   onConfirm,
-  cancelText = 'Batal',
-  confirmText = 'Hapus',
+  cancelText = 'Cancel',
+  confirmText = 'Delete',
 }: Props) {
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
