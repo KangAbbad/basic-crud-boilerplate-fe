@@ -26,7 +26,7 @@ export function WeightField({ control }: Props) {
             className={error ? 'border-red-500' : ''}
             onChange={(e) => {
               const sanitized = sanitizeDecimalInput(e.target.value)
-              onChange(sanitized ? String(parseFloat(sanitized)) : '')
+              onChange(sanitized)
             }}
             onKeyDown={allowNumbersWithDecimal}
           />
