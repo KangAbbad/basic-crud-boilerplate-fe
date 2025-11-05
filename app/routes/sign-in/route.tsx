@@ -3,7 +3,7 @@ import { SignIn } from '@clerk/react-router'
 import type { Route } from './+types/route'
 
 export function meta(_metaArgs: Route.MetaArgs) {
-  return [{ title: 'Masuk - Qlover Laundry POS' }]
+  return [{ title: 'Sign In - Basic CRUD Boilerplate' }]
 }
 
 export default function SignInPage() {

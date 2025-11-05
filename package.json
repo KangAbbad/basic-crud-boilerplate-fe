@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate-fe",
+  "name": "basic-crud-boilerplate-fe",
   "private": true,
   "type": "module",
   "scripts": {

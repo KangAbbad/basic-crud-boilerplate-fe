@@ -20,16 +20,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           ...idID.signIn,
           start: {
             ...idID.signIn?.start,
-            title: 'Selamat Datang di Qlover Laundry',
-            subtitle: 'Silahkan masuk untuk melanjutkan',
+            title: 'Welcome to Basic CRUD Boilerplate',
+            subtitle: 'Please sign in to continue',
           },
         },
         signUp: {
           ...idID.signUp,
           start: {
             ...idID.signUp?.start,
-            title: 'Selamat Datang di Qlover Laundry',
-            subtitle: 'Silahkan daftar untuk melanjutkan',
+            title: 'Welcome to Basic CRUD Boilerplate',
+            subtitle: 'Please sign up to continue',
           },
         },
       }}
