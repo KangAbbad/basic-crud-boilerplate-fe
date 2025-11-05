@@ -1,0 +1,66 @@
+{
+  "extends": ["universe/web", "universe/shared/typescript-analysis"],
+  "plugins": ["custom-code-patterns"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.d.ts"],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "vars": "all",
+            "args": "none",
+            "ignoreRestSiblings": true,
+            "caughtErrors": "all",
+            "varsIgnorePattern": "^typeSchema$|^\\w+Schema$"
+          }
+        ],
+        "@typescript-eslint/no-floating-promises": "off",
+        "react/function-component-definition": [
+          "warn",
+          {
+            "namedComponents": "function-declaration",
+            "unnamedComponents": "function-expression"
+          }
+        ],
+        "import/no-default-export": "warn",
+        "custom-code-patterns/classname-order": "warn",
+        "custom-code-patterns/no-handle-prefix": "warn",
+        "custom-code-patterns/no-item-terminology": [
+          "warn",
+          {
+            "ignoreTestFiles": true,
+            "ignoreFiles": ["*/BaseResponse.ts"],
+            "ignoreDirectories": ["components/ui"],
+            "libraryPatterns": ["antd/es", "@tanstack", "lucide-react", "@radix-ui", "components/ui"]
+          }
+        ],
+        "custom-code-patterns/no-on-prefix": "warn"
+      }
+    },
+    {
+      "files": [
+        "vite.config.ts",
+        "react-router.*",
+        "root.{js,jsx,ts,tsx}",
+        "routes.{js,jsx,ts,tsx}",
+        "route.{js,jsx,ts,tsx}",
+        "playwright.config.ts"
+      ],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ],
+  "ignorePatterns": [
+    "**/node_modules/**/*",
+    "**/.husky/**/*",
+    "**/.react-router/**/*",
+    "**/build/**/*",
+    "**/public/**/*",
+    "**/dev-dist/**/*"
+  ]
+}
