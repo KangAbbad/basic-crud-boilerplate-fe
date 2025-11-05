@@ -30,28 +30,11 @@ bun run test:e2e:ui
 bun run test:e2e:headed
 ```
 
-## Test Structure
-
-- `e2e/outlet-creation.spec.ts` - Tests for outlet creation flow
-
-## Test Coverage
-
-### Outlet Creation (`outlet-creation.spec.ts`)
-
-1. **Create new outlet** - Full flow from form to list verification
-2. **Validation errors** - Required field validation
-3. **Cancel creation** - Form cancellation and navigation
-4. **Edit existing outlet** - Update flow verification
-5. **Province-City cascade** - Dropdown dependency validation
-6. **Logo upload/remove** - Image upload and removal functionality
-7. **Create with logo and location** - Full form with optional fields
-8. **All fields presence** - Verify all form fields render correctly
-
 ## Important Notes
 
 - Tests clear IndexedDB before each test for clean state
 - Dev server starts automatically via `webServer` config
-- Tests run on `http://localhost:3004` (configured in `playwright.config.ts`)
+- Tests run on `http://localhost:3006` (configured in `playwright.config.ts`)
 - Authentication handled by Clerk (requires proper setup)
 
 ## Writing New Tests
