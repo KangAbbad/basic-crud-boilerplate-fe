@@ -21,7 +21,7 @@ export function PhoneField({ control }: Props) {
           <Input
             id="phone"
             type="tel"
-            placeholder="Phone number"
+            placeholder="+62812..."
             className={error ? 'border-red-500' : ''}
             value={value ?? ''}
             onChange={(e) => {

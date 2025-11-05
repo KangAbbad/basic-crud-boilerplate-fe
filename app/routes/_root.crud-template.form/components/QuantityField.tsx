@@ -21,8 +21,9 @@ export function QuantityField({ control }: Props) {
           <Input
             id="quantity"
             type="text"
-            className={error ? 'border-red-500' : ''}
+            placeholder="0"
             value={value ?? ''}
+            className={error ? 'border-red-500' : ''}
             onChange={(e) => {
               const sanitized = sanitizeNumberInput(e.target.value)
               onChange(sanitized ? String(parseInt(sanitized, 10)) : '')

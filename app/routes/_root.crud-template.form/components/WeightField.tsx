@@ -21,8 +21,9 @@ export function WeightField({ control }: Props) {
           <Input
             id="weight"
             type="text"
-            className={error ? 'border-red-500' : ''}
+            placeholder="0"
             value={value ?? ''}
+            className={error ? 'border-red-500' : ''}
             onChange={(e) => {
               const sanitized = sanitizeDecimalInput(e.target.value)
               onChange(sanitized ? String(parseFloat(sanitized)) : '')
